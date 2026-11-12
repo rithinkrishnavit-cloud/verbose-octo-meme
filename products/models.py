@@ -11,5 +11,17 @@ class Products(models.Model):
     is_available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    category_choice = [
+        ("T-Shirts", "T-Shirts"),
+        ("Shirts", "Shirts"),
+        ("Jeans", "Jeans"),
+        ("Shorts", "Shorts"),
+        ("Hoodies", "Hoodies"),
+        ("Polo-Shirts", "Polo-Shirts"),
+        ("Caps", "Caps"),
+    ]
+
+    category = models.CharField(max_length=50, choices=category_choice)
+
     def __str__(self):
         return self.name
