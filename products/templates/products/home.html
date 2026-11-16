@@ -45,19 +45,45 @@
     </section>
 
     <!-- Shop by Category -->
-    <section class="categories">
-        <h2>Browse All You Needs.</h2>
+    <section class="categories" id="categories">
+        <h2>Browse All You Needs</h2>
         <div class="category-buttons">
-            <button class="active">All</button>
-            <button>T-Shirts</button>
-            <button>Shirts</button>
-            <button>Jeans</button>
-            <button>Shorts</button>
-            <button>Hoodies</button>
-            <button>Polo-Shirts</button>
-            <button>Caps</button>
+            <form method="GET" action="#categories">
+                <button type="submit" name="category" value="" class="{% if not selected_category %}active{% endif %}">
+                    All
+                </button>
+                <button type="submit" name="category" value="T-Shirts"
+                    class="{% if selected_category == 'T-Shirts' %}active{% endif %}">
+                    T-Shirts
+                </button>
+                <button type="submit" name="category" value="Shirts"
+                    class="{% if selected_category == 'Shirts' %}active{% endif %}">
+                    Shirts
+                </button>
+                <button type="submit" name="category" value="Jeans"
+                    class="{% if selected_category == 'Jeans' %}active{% endif %}">
+                    Jeans
+                </button>
+                <button type="submit" name="category" value="Shorts"
+                    class="{% if selected_category == 'Shorts' %}active{% endif %}">
+                    Shorts
+                </button>
+                <button type="submit" name="category" value="Hoodies"
+                    class="{% if selected_category == 'Hoodies' %}active{% endif %}">
+                    Hoodies
+                </button>
+                <button type="submit" name="category" value="Polo-Shirts"
+                    class="{% if selected_category == 'Polo-Shirts' %}active{% endif %}">
+                    Polo-Shirts
+                </button>
+                <button type="submit" name="category" value="Caps"
+                    class="{% if selected_category == 'Caps' %}active{% endif %}">
+                    Caps
+                </button>
+            </form>
         </div>
     </section>
+
 
     <!-- products -->
     <div class="products">

@@ -182,6 +182,12 @@ body {
   color: white;
 }
 
+.category-buttons button.active {
+    background-color: #cb8f98;
+    color: white;
+    border: 1px solid #fdfdfd;
+}
+
 /* products */
 
 /* Products Section */

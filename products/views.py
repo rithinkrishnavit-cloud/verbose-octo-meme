@@ -6,6 +6,15 @@ from .models import Products
 # Create your views here.
 def home(request):
 
-    products = Products.objects.all()
+    category = request.GET.get("category")
 
-    return render(request, "products/home.html", {"products": products})
+    if category:
+        products = Products.objects.filter(category=category)
+    else:
+        products = Products.objects.all()
+
+    return render(
+        request,
+        "products/home.html",
+        {"products": products, "selected_category": category},
+    )
