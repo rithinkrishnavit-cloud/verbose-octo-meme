@@ -35,11 +35,22 @@ def add_to_cart(request, product_id):
 
 def cart(request):
 
-    # Get the user's cart
     cart = get_cart(request)
 
-    # Get all products inside the cart
     cart_items = CartItem.objects.filter(cart=cart)
 
-    # Send cart items to HTML page
-    return render(request, "cart/cart.html", {"cart_items": cart_items})
+    total = sum(item.product.price * item.quantity for item in cart_items)
+
+    return render(request, "cart/cart.html", {"cart_items": cart_items, "total": total})
+
+
+def remove_from_cart(request, item_id):
+
+    # Get the selected cart item
+    cart_item = get_object_or_404(CartItem, id=item_id)
+
+    # Delete the cart item
+    cart_item.delete()
+
+    # Return to cart page
+    return redirect("cart")
