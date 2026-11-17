@@ -13,7 +13,6 @@ class Cart(models.Model):
     # OneToOneField creates a relationship between
     # User and Cart tables.
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
-
     # Stores the guest user's session ID.
     session_key = models.CharField(max_length=40, null=True, blank=True, unique=True)
 
@@ -29,12 +28,8 @@ class CartItem(models.Model):
     # Connects CartItem with Cart.
     # One Cart can contain multiple CartItems.
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
-
     # Connects CartItem with your existing Products model.
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
-
-    # Stores the selected product quantity.
-    # Default quantity is 1.
     quantity = models.PositiveIntegerField(default=1)
 
     def __str__(self):

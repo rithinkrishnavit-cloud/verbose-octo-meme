@@ -91,9 +91,14 @@
                     {% endif %}
                 </div>
                 {% if product.is_available and product.stock > 0 %}
-                <button class="add-cart-btn" type="button">
-                    Add to Cart
-                </button>
+                <form action="{% url 'add_to_cart' product.id %}" method="POST">
+                    {% csrf_token %}
+
+                    <button class="add-cart-btn" type="submit">
+                        Add to Cart
+                    </button>
+                </form>
+
                 {% else %}
                 <button class="add-cart-btn disabled" disabled>
                     Out of Stock
