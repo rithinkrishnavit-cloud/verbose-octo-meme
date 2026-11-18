@@ -12,6 +12,7 @@ def get_cart(request):
             request.session.create()
         # Get the guest user's session ID
         session_key = request.session.session_key
+        print("Session Key:", request.session.session_key)
         # Get existing guest cart or create a new one
         cart, created = Cart.objects.get_or_create(session_key=session_key)
 
