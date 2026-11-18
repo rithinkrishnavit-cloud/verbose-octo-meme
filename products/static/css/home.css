@@ -372,3 +372,107 @@ body {
   text-align: center;
   font-size: 14px;
 }
+
+
+
+
+/* User Button */
+
+.user-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #003b25;
+}
+
+
+/* Background Overlay */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 1000;
+}
+
+
+/* Account Panel */
+
+.account-panel {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 450px;
+    max-width: 90%;
+    height: 100vh;
+    background: white;
+    z-index: 1001;
+    transition: 0.4s ease;
+    overflow-y: auto;
+}
+
+
+/* Open Panel */
+
+.account-panel.active {
+    right: 0;
+}
+
+.overlay.active {
+    display: block;
+}
+
+
+/* Close Button */
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* Login Section */
+
+.login-section {
+    padding: 70px 40px 35px;
+}
+
+.login-section h2 {
+    font-family: serif;
+    font-size: 24px;
+}
+
+.login-section p {
+    line-height: 1.6;
+}
+
+
+/* Register Section */
+
+.register-section {
+    background: #f2f2f2;
+    padding: 30px 40px;
+}
+
+
+/* Buttons */
+
+.account-btn {
+    display: inline-block;
+    background: #002719;
+    color: white;
+    padding: 18px 25px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.account-btn:hover {
+    background: #164b35;
+}

@@ -35,7 +35,7 @@ def add_to_cart(request, product_id):
 
 
 def cart(request):
-
+    # find current user
     cart = get_cart(request)
 
     cart_items = CartItem.objects.filter(cart=cart)
