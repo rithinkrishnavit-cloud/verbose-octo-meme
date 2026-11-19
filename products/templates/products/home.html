@@ -30,7 +30,17 @@
     <!-- Account Panel -->
     <div class="account-panel" id="accountPanel">
         <button class="close-btn" onclick="closeAccount()">×</button>
-
+        {% if user.is_authenticated %}
+        <!-- Logged In User -->
+        <div class="login-section">
+            <h2>WELCOME!</h2>
+            <h3>{{ user.first_name|default:user.username }}</h3>
+            <p>You are successfully logged in.</p>
+            <a href="{% url 'user_logout' %}" class="account-btn">
+                Logout
+            </a>
+        </div>
+        {% else %}
         <!-- Login Section -->
         <div class="login-section">
             <h2>LOGIN</h2>
@@ -43,7 +53,6 @@
                 Login
             </a>
         </div>
-
         <!-- Register Section -->
         <div class="register-section">
             <h3>DON'T HAVE AN ACCOUNT?</h3>
@@ -54,7 +63,9 @@
                 Create an account
             </a>
         </div>
+        {% endif %}
     </div>
+
 
     <!-- Hero Section -->
     <section class="hero">
