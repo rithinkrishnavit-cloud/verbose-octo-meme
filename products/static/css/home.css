@@ -23,21 +23,19 @@ body {
 ========================= */
 
 .navbar {
-    width: 100%;
-    height: 90px;
-    padding: 0 8%;
+  width: 100%;
+  height: 70px;
+  padding: 0 8%;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    background-color: #f7f5f2;
-    border-bottom: 1px solid #e5e2dc;
-
-    /* Sticky Navbar */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #e0ceab;
+  /* Sticky Navbar */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Logo */
@@ -188,9 +186,9 @@ body {
 }
 
 .category-buttons button.active {
-    background-color: #cb8f98;
-    color: white;
-    border: 1px solid #fdfdfd;
+  background-color: #cb8f98;
+  color: white;
+  border: 1px solid #fdfdfd;
 }
 
 /* products */
@@ -373,106 +371,97 @@ body {
   font-size: 14px;
 }
 
-
-
-
 /* User Button */
 
 .user-btn {
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    color: #003b25;
+  background: none;
+  border: none;
+  color: #3e3e43;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
 }
-
 
 /* Background Overlay */
 
 .overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 1000;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 1000;
 }
-
 
 /* Account Panel */
 
 .account-panel {
-    position: fixed;
-    top: 0;
-    right: -500px;
-    width: 450px;
-    max-width: 90%;
-    height: 100vh;
-    background: white;
-    z-index: 1001;
-    transition: 0.4s ease;
-    overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  width: 450px;
+  max-width: 90%;
+  height: 100vh;
+  background: white;
+  z-index: 1001;
+  transition: 0.4s ease;
+  overflow-y: auto;
 }
-
 
 /* Open Panel */
 
 .account-panel.active {
-    right: 0;
+  right: 0;
 }
 
 .overlay.active {
-    display: block;
+  display: block;
 }
-
 
 /* Close Button */
 
 .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
 }
-
 
 /* Login Section */
 
 .login-section {
-    padding: 70px 40px 35px;
+  padding: 70px 40px 35px;
 }
 
 .login-section h2 {
-    font-family: serif;
-    font-size: 24px;
+  font-family: serif;
+  font-size: 24px;
 }
 
 .login-section p {
-    line-height: 1.6;
+  line-height: 1.6;
 }
-
 
 /* Register Section */
 
 .register-section {
-    background: #f2f2f2;
-    padding: 30px 40px;
+  background: #f2f2f2;
+  padding: 30px 40px;
 }
-
 
 /* Buttons */
 
 .account-btn {
-    display: inline-block;
-    background: #002719;
-    color: white;
-    padding: 18px 25px;
-    text-decoration: none;
-    margin-top: 10px;
+  display: inline-block;
+  background: #002719;
+  color: white;
+  padding: 18px 25px;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
 .account-btn:hover {
-    background: #164b35;
+  background: #164b35;
 }
